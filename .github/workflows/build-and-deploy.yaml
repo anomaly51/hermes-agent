@@ -35,9 +35,13 @@ jobs:
           HARBOR_USERNAME: ${{ secrets.HARBOR_USERNAME || 'admin' }}
           HARBOR_PASSWORD: ${{ secrets.HARBOR_PASSWORD || 'admin' }}
         run: |
-          echo "${HARBOR_PASSWORD}" | docker login "${HARBOR_REGISTRY}" \
-            --username "${HARBOR_USERNAME}" \
-            --password-stdin
+          for i in 1 2 3 4 5; do
+            echo "${HARBOR_PASSWORD}" | docker login "${HARBOR_REGISTRY}" \
+              --username "${HARBOR_USERNAME}" \
+              --password-stdin && exit 0
+            sleep 10
+          done
+          exit 1
 
       - name: Build image
         run: |
