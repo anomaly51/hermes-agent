@@ -10,7 +10,7 @@ env:
   HARBOR_REGISTRY: harbor.api-api-api.com
   HARBOR_PROJECT: hermes-agent
   IMAGE_NAME: gateway
-  GITOPS_REPOSITORY: anomaly51/argocd-learn-gitops
+  GITOPS_REPOSITORY: anomaly51/workload-2-k3s-argocd
   GITOPS_BRANCH: main
   GITOPS_DEPLOYMENT: apps/hermes-agent/deployment.yaml
 
