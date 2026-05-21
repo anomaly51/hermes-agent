@@ -2,8 +2,6 @@
 
 This repository only builds the Hermes Agent Docker image.
 
-Release workflow fast-path marker: 2026-05-21.
-
 CI/CD flow:
 
 1. Call the shared app release workflow from `anomaly51/github-actions-toolkit`.
