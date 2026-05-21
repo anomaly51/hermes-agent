@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   deploy:
-    uses: anomaly51/github-actions-toolkit/.github/workflows/argocd-app-release.yml@v10
+    uses: anomaly51/github-actions-toolkit/.github/workflows/argocd-app-release.yml@v11
     with:
       app-name: Hermes Agent
       runner: anomaly51-runner
