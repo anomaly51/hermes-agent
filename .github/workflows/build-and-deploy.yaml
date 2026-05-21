@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   deploy:
-    uses: anomaly51/github-actions-toolkit/.github/workflows/app-release.yml@v6
+    uses: anomaly51/github-actions-toolkit/.github/workflows/app-release.yml@v7
     with:
       app-name: Hermes Agent
       runner: anomaly51-runner
@@ -20,7 +20,7 @@ jobs:
       registry: harbor.api-api-api.com
       image-project: hermes-agent
       image-name: gateway
-      platform: linux/amd64
+      source-image-ref: harbor.api-api-api.com/hermes-agent/gateway:1733cb3a13bb-slim2
       gitops-repository: anomaly51/workload-2-k3s-argocd
       deployment-path: apps/hermes-agent/deployment.yaml
       deployment-container-name: gateway
